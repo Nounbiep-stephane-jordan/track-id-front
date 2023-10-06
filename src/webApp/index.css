@@ -1,0 +1,260 @@
+.main-box{
+width: 1200px;
+margin: auto;
+flex-shrink: 0;
+border-radius: 5px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px #D6E7D5;
+position: relative;
+}
+
+.main-box .headers{
+margin-top: 50px;
+height: 70px;
+flex-shrink: 0;
+border-radius: 5px;
+background: #D6E7D5;
+}
+
+.main-box .headers span{
+color: #000;
+font-family: Alata;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.main-box .content span{
+color: #000;
+font-family: Antic;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+ 
+
+.main-box .content .row{
+height: 60px;
+position: relative;
+cursor: pointer;
+}
+
+.main-box .row-actions{
+     height: 50px;
+     width: 50px;
+     background-color: var(--white);
+     border-radius: 100%;
+     position: absolute;
+     right: 6rem;
+     top: -1rem;
+     filter: drop-shadow(0px 4px 4px #D6E7D5);
+     display: none;
+}
+
+
+
+.main-box .row-actions-menu{
+width: 152px;
+height: 98px;
+flex-shrink: 0;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px #D6E7D5;
+position: absolute;
+top:-6rem;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+}
+
+.main-box .row-actions-menu .even_flex span,
+.main-box .row-actions-menu .even_grid_2Col span{
+color: var(--logoGreen);
+font-family: Alata;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.main-box .row-actions-menu .even_flex:hover {
+     background-color: #D6E7D5;
+     padding:10px;
+}
+.main-box .row-actions-menu .even_grid_2Col:hover {
+     background-color: #D6E7D5;
+     padding:10px;
+}
+
+.main-box .content .row:hover{
+     background-color: rgba(19, 236, 0, 0.34);
+}
+
+.main-box .content .row:hover .row-actions{
+     display: flex;
+}
+
+.even_grid{
+     display: grid;
+     align-items: center;
+     justify-content: space-evenly;
+     grid-template-columns: 100px 100px 100px 100px 100px;
+}
+
+.even_grid_2Col{
+     display: grid;
+     align-items: center;
+     justify-content: space-evenly;
+     grid-template-columns: 50px 50px;
+}
+
+.arrows{
+     width: 20px;
+     align-self: flex-start;
+     height: 50px;
+     padding: 20px;
+     transform: translateX(116px);
+}
+
+.arrows i{
+     width: 50px;
+     margin-left: 15px;
+     color: var(--logoGreen);
+     cursor: pointer;
+}
+
+
+.camera-box{
+background-color: var(--logoGreen);
+filter: drop-shadow(0px 4px 4px #D6E7D5);
+height: 60px;
+width: 60px;
+border-radius: 100%;
+position: absolute;
+bottom:0rem;
+right:5rem;
+cursor: pointer;
+}
+
+.camera-box:hover{
+     transform: scale(1.2);
+}
+
+.camera-box i{
+     color: white;
+}
+
+.empty-img{
+     height:500px;
+     width:500px;
+     margin: auto;
+}
+
+.overlay {
+background: rgba(217, 217, 217, 0.15);
+backdrop-filter: blur(2px);
+position:fixed;
+top:0px;
+left:0px;
+right:0px;
+bottom:0px;
+z-index:10;
+}
+
+.modal {
+width: 500px;
+position: fixed;
+left:24rem;
+top:1rem;
+z-index: 12;
+border-radius: 10px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px #AFF8A8;
+
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-direction: column;
+
+}
+
+.modal h2{
+     color: var(--logoGreen);
+}
+
+
+ .modal .inputs-row{
+     width:300px;
+ }
+
+ .modal .inputs-row input{
+     border: none;
+     outline: none;
+     padding:15px;
+     width: -webkit-fill-available;
+     border-radius: 10px;
+     background: #D6E7D5;
+ }
+
+ .modal .inputs-row span {
+     margin:10px 0;
+ }
+
+ .modal-close {
+     position: absolute;
+     top: -12px;
+     right: -20px;
+     cursor: pointer;
+ }
+
+ .modal-close i{
+     color: hsl(0, 100%, 61%);
+     font-size: 2rem;
+ }
+
+ 
+
+ .green-btn {
+     background-color: var(--logoGreen);
+     border-radius:10px;
+ }
+
+ .modal-divider{
+     width:300px;
+     background:#F5F5F5;
+     height: 3px;
+ }
+
+ .modal-divid span{
+color: #000;
+font-family: Alata;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ }
+
+ .modal .img{
+     margin: 10px 0;
+     width:7%;
+ }
+
+ .modal .large{
+     width: 30%;
+ }
+
+ .modal button{
+color: #FFF;
+font-family: Alata;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ }
+
+ .modal video{
+     height:auto;
+ }

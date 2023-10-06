@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import WebAppIndex from './webApp/webAppIndex';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import WebsiteIndex from './website/websiteIndex';
+import { AppContext } from './context/context';
+import { useState } from 'react';
+
 
 function App() {
+  const [showModal,setShowModal] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppContext.Provider value={{showModal,setShowModal}}> 
+      <BrowserRouter>
+      <Routes>
+      <Route path="/webapp" element={<WebAppIndex/>} />
+      <Route path="/" element={<WebsiteIndex/>} />
+      </Routes>
+      </BrowserRouter>
+      </AppContext.Provider>
     </div>
   );
 }

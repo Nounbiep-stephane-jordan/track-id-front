@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -35,4 +36,123 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body, html {
+  height: 100%;
+}
+
+body * {
+  transition: all 0.5s;
+}
+
+/* add open sans as font  */
+
+body{
+  font-family: 'Antic', sans-serif;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position:relative;
+}
+
+.center_flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.even_flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.between_flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.even_flex_column{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  }
+
+
+  .start_flex_column{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    }
+
+button{
+  padding: 15px 50px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  cursor:pointer;
+  margin:10px 0px;
+}
+
+.paralax{
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+  width: 100%;
+}
+
+.divider {
+  height: 2px;
+  background: rgba(242, 245, 242, 0.69);
+}
+
+.mt {
+  margin-top:20px;
+}
+
+.pt{
+  padding-top: 20px;
+}
+
+
+
+
+.mb{
+  margin-bottom: 20px;
+}
+
+.pb{
+  padding-bottom: 20px;
+}
+
+
+.ml{
+  margin-left: 20px;
+}
+
+.pl{
+  padding-left: 20px;
+}
+
+
+.mr{
+  margin-right:20px
+}
+
+.pr{
+  padding-right: 20px;
 }
