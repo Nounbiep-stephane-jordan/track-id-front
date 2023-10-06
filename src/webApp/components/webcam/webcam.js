@@ -17,9 +17,10 @@ const CustomWebcam = () => {
         };
 
     const sendImageForProcessing = (img) => {
-      let url = `http://localhost:4000/process_image`
+      let url = `http://localhost:4000/process_image` 
+      let prodUrl ="https://track-id-frontend.vercel.app/webapp"
       let data = {data:img}
-      axios.post(url,data)
+      axios.post(prodUrl,data)
       .then((result) => {console.log(result,"result in sen img")})
       .catch((err) => console.log(err,"err in send img"))
     }
