@@ -364,7 +364,7 @@ line-height: normal;
      .modal{
           top: 5rem;
           width: 350px;
-          left: 1rem;
+          left: 0.6rem;
           z-index: 999;
      }
 
@@ -378,7 +378,8 @@ line-height: normal;
      }
 
      .modal button{
-          padding: 10px 20px;
+          padding: 9px 30px;
+          font-size:10px;
      }
 
      .App .small-modal  .img{
@@ -391,11 +392,26 @@ line-height: normal;
 
      .small-modal h2{
           font-size: 20px;
+          margin-bottom: 0px;
      }
 
      .App .small-modal img {
           width: 50%;
      }
+
+     .modal .inputs-row {
+          width: auto;
+      }
+
+      .modal-divid span{
+          font-size: 18px;
+      }
+
+      .modal .inputs-row input {
+          padding:0 5px;
+          height:25px;
+          border-radius: 3px;
+      }
 
   
  }
@@ -406,7 +422,7 @@ line-height: normal;
      }
  }
 
- @media only screen and (max-width:300px) {
+ @media only screen and (max-width:400px) {
      .App .modal {
           width: 95vw;
           right: 1rem;
@@ -416,4 +432,8 @@ line-height: normal;
           width: 180px;
           height: 180px;
      }
+
+     .App .small-modal .webcam-img {
+          width: auto;
+      }
   }
