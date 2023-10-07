@@ -150,6 +150,7 @@ line-height: normal;
           background-color: var(--white);
           box-shadow: 0px 4px 4px 0px #D6E7D5;
           padding: 20px;
+          z-index: 99;
      }
 
      .profile-filter-even{

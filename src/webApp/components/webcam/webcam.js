@@ -32,7 +32,7 @@ const CustomWebcam = () => {
   return (
      <div className="">
      {imgData ? (
-       <img src={imgData} alt="webcam"  width={500} height={200} />
+       <img src={imgData} alt="webcam" className="webcam-img" width={500} height={200} />
      ) : (
        <Webcam height={500} width={500} ref={webcamRef} screenshotFormat={"image/png"} screenshotQuality={1}/>
      )}

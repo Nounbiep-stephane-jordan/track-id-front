@@ -258,3 +258,141 @@ line-height: normal;
  .modal video{
      height:auto;
  }
+
+
+
+ /* mobile */
+
+ .main-box-small{
+     display:none;
+ }
+
+ @media only screen and (max-width:800px) {
+     html,body{
+          overflow: hidden;
+     }
+     .main-box-large{
+          display:none;
+     }
+
+     .main-box-small{
+          margin-top: 50px;
+          display: flex;
+          width: 360px; 
+          overflow: scroll;
+     }
+
+    .main-box-small .headers-small{
+          width: 130px;
+          height: 500px;
+          margin-top: 0px;
+          /* display:flex; */
+          /* flex-direction: column; */
+          justify-content: center;
+          align-items: center;
+          display: grid;
+          grid-template-rows: 50px 50px 50px 50px 50px 50px;
+
+     }
+
+     .main-box-small .arrows{
+          transform: translate(0);
+          align-self: center;
+          width: 47px;
+          height: 20px;
+          flex-shrink: 0;
+     }
+     .main-box-small .arrows i{
+          color: black;
+     }
+
+     .main-box-small .camera-box{
+          bottom: 1rem;
+          right: 2rem;
+          position: fixed;
+     }
+
+
+     .main-box-small .content {
+          width: 130px;
+          height: 500px;
+          display:flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          
+     }
+
+ 
+
+     .main-box-small .row{
+          width: 130px;
+          height: 500px;
+          border-right: solid 3px rgba(242, 245, 242, 0.69);
+          height: auto !important;
+          position: relative;
+
+          justify-content: center;
+          align-items: center;
+          display: grid;
+          grid-template-rows: 50px 50px 50px 50px 50px 50px;
+          grid-template-columns: auto;
+     }
+
+     .main-box .scrolable .row:hover{
+          background-color: rgba(19, 236, 0, 0.34);
+     }
+
+    .main-box .scrolable .row-actions-small{
+          right: -2rem;
+          top: 5rem;
+     }
+
+     .main-box .scrolable .row:hover .row-actions-small{
+          display: flex;
+     }
+
+     .main-box-small .scrolable{
+          width:auto;
+          display: flex;
+          flex-shrink: 0;
+          overflow: scroll;
+     }
+
+     .modal{
+          top: 5rem;
+          width: 350px;
+          left: 1rem;
+          z-index: 999;
+     }
+
+     .modal video{
+          width: 350px;
+     }
+
+     .modal-close {
+          right: -6px;
+     }
+
+     .modal button{
+          padding: 10px 20px;
+     }
+
+     .App .small-modal  .img{
+          width: 10%;
+     }
+
+     .App .small-modal .webcam-img {
+          width: 100%;
+     }
+
+     .small-modal h2{
+          font-size: 20px;
+     }
+
+     .App .small-modal img {
+          width: 50%;
+     }
+
+  
+ }

@@ -88,7 +88,7 @@ const Nav = () => {
        <input type="text" placeholder="search"/>
        </div>
        <div className="even_flex profile-filter-even">
-       <div className="nav-profile center_flex">
+       <div className="nav-profile center_flex" onClick={handleShowProfile}>
        <i className="fa-solid fa-user"></i>
        </div>
        <div className="nav-filter center_flex" onClick={()=>setFilterShowmenu(!showFiltermenu)}>

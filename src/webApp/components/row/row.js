@@ -44,11 +44,11 @@ const Row = ({obj}) => {
                <span>{obj.sex}</span>
                <span>{obj.at}</span>
                <span>{obj.et}</span>
-               <div className="row-actions center_flex" onClick={()=>setRowActions(!rowAction)}>
+               <div className="row-actions row-actions-small center_flex" onClick={()=>setRowActions(!rowAction)}>
                <i class="fa-solid fa-caret-down fa-2xl"></i>
                {rowAction?
                <>
-               <div className="row-actions-menu ">
+               <div className="row-actions-menu row-actions-menu-small">
                 {actions.map((a) => 
                 <>
                    <div key={a.name} className="even_grid_2Col" onClick={()=>handleAction(a.name)}>

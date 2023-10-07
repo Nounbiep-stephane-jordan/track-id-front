@@ -31,7 +31,7 @@ const WebAppIndex = () => {
           </>
      }/>: null
 }
-     <div className="main-box">
+     <div className="main-box main-box-large">
           <div className="headers even_grid">
                {headers.map((h) => <span key={h}>{h}</span>)}
           </div>
@@ -56,6 +56,40 @@ const WebAppIndex = () => {
                </div>
           </div>
      </div>
+
+
+
+     <div className="main-box main-box-small">
+          <div className="headers headers-small">
+               {headers.map((h) => <span key={h}>{h}</span>)}
+
+               <div className="even_flex arrows">
+               <i className="fa-solid fa-caret-left fa-2xl"></i>
+               <i className="fa-solid fa-caret-right fa-2xl"></i>
+               </div>
+
+          </div>
+
+          <div className="scrolable">
+          {data.length===0 ?<div className="empty-img center_flex"><img src={empty} alt="empty"/></div>:
+               <>
+               {sampleData.map((obj) => (
+               <>
+               <Row key={obj.name} obj={obj}/>
+               <div className="divider"></div>
+               </>))}
+               </>
+
+               }
+          </div>
+
+               <div className="camera-box center_flex" onClick={handleTakePicture}>
+                    <i className="fa-solid fa-camera fa-lg"></i>
+               </div>
+          </div>
+
+          
+   
      </>
 }
 
