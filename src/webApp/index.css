@@ -369,8 +369,8 @@ line-height: normal;
      }
 
      .modal video{
-          width: 300px !important;
-          height:300px !important;
+          width: 300px ;
+          height:300px ;
      }
 
      .modal-close {
@@ -403,7 +403,6 @@ line-height: normal;
  @media only screen and (max-width:700px) {
     .App .modal{
           right:10rem;
-          width: min-content;
      }
  }
 
@@ -411,5 +410,10 @@ line-height: normal;
      .App .modal {
           width: 95vw;
           right: 1rem;
+     }
+
+     .modal-video{
+          width: 180px;
+          height: 180px;
      }
   }
