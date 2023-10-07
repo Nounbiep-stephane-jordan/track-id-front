@@ -351,7 +351,7 @@ line-height: normal;
 
      .main-box .scrolable .row:hover .row-actions-small{
           display: flex;
-          z-index: 99;
+          z-index: 999;
      }
 
      .main-box-small .scrolable{
@@ -369,7 +369,8 @@ line-height: normal;
      }
 
      .modal video{
-          width: 350px;
+          width: 300px !important;
+          height:300px !important;
      }
 
      .modal-close {
@@ -398,3 +399,17 @@ line-height: normal;
 
   
  }
+
+ @media only screen and (max-width:700px) {
+    .App .modal{
+          right:10rem;
+          width: min-content;
+     }
+ }
+
+ @media only screen and (max-width:300px) {
+     .App .modal {
+          width: 95vw;
+          right: 1rem;
+     }
+  }
