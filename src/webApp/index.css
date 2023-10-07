@@ -347,9 +347,11 @@ line-height: normal;
           right: -2rem;
           top: 5rem;
      }
+ 
 
      .main-box .scrolable .row:hover .row-actions-small{
           display: flex;
+          z-index: 99;
      }
 
      .main-box-small .scrolable{
