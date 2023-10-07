@@ -22,6 +22,7 @@ const Row = ({obj}) => {
 
      {showEditModal  ?      <Modal showCross={true} setShow={setShowEditModal} content={
           <>
+          <div className="modal-content">
           <h2>Edit entry</h2>
           <div className="inputs even_flex_column">
                {headers.map((h) => 
@@ -35,6 +36,7 @@ const Row = ({obj}) => {
           </div>
 
           <button className="btn green-btn">Edit</button>
+          </div>
 
           </>
      }/>:null}

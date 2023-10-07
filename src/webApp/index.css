@@ -186,10 +186,7 @@ flex-direction: column;
 }
 
 
- .modal .inputs-row{
-     width:300px;
- }
-
+ 
  .modal .inputs-row input{
      border: none;
      outline: none;
@@ -259,7 +256,9 @@ line-height: normal;
      height:auto;
  }
 
-
+ .modal-content {
+     overflow: scroll;
+ }
 
  /* mobile */
 
@@ -366,6 +365,7 @@ line-height: normal;
           width: 350px;
           left: 0.6rem;
           z-index: 999;
+          height:400px !important;
      }
 
      .modal video{
@@ -378,8 +378,8 @@ line-height: normal;
      }
 
      .modal button{
-          padding: 9px 30px;
-          font-size:10px;
+          padding: 9px 35px;
+          margin:10px 0;
      }
 
      .App .small-modal  .img{
@@ -399,19 +399,17 @@ line-height: normal;
           width: 50%;
      }
 
-     .modal .inputs-row {
+ 
+      .modal .inputs-row inputs {
           width: auto;
+          padding: 10px;
       }
 
       .modal-divid span{
           font-size: 18px;
       }
 
-      .modal .inputs-row input {
-          padding:0 5px;
-          height:25px;
-          border-radius: 3px;
-      }
+ 
 
   
  }
