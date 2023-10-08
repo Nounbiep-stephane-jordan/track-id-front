@@ -37,7 +37,9 @@ const CustomWebcam = () => {
     }
 
   const videoConstraints = {
-    facingMode:"environment"
+    facingMode:"environment",
+    height:700,
+    width:500,
   }
 
 
@@ -50,7 +52,7 @@ const CustomWebcam = () => {
 {imgData ? (
        <img src={imgData} alt="webcam" className="webcam-img" width={500} height={200} />
      ) : (
-       <Webcam height={500} width={500} videoConstraints={videoConstraints} ref={webcamRef} screenshotFormat={"image/jpg"} screenshotQuality={1}/>
+       <Webcam imageSmoothing={true} height={700} width={500} videoConstraints={videoConstraints} ref={webcamRef} screenshotFormat={"image/jpg"} screenshotQuality={1}/>
      )}
      <div className="mt">
        {imgData ? (
