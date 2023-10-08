@@ -8,7 +8,6 @@ const CustomWebcam = () => {
      const capture = useCallback(() => {
           const imageSrc = webcamRef.current.getScreenshot();
           setImgData(imageSrc);
-          console.log(imageSrc,"kkkkkk")
           sendImageForProcessing(imageSrc)
         }, [webcamRef]);
 
@@ -17,13 +16,29 @@ const CustomWebcam = () => {
         };
 
     const sendImageForProcessing = (img) => {
-      let url = `http://localhost:4000/process_image` 
+      let nodeUrl = `http://localhost:4000/process_image` 
       let prodUrl ="https://track-id-back.vercel.app/process_image"
-      let data = {data:img}
-      axios.post(prodUrl,data)
+      let flaskUrl = "http://localhost:5000/process_image"
+      console.log(img,"let see base64")
+      if(img == null) return
+      let base64Image = img.split(",")[1];
+      let data = {
+        image: base64Image
+      };
+ 
+      axios.post(flaskUrl,data,{
+        headers:{
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin':'*'
+        }
+      })
       .then((result) => {console.log(result,"result in sen img")})
       .catch((err) => console.log(err,"err in send img"))
     }
+
+  const videoConstraints = {
+    facingMode:"environment"
+  }
 
 
  
@@ -35,7 +50,7 @@ const CustomWebcam = () => {
 {imgData ? (
        <img src={imgData} alt="webcam" className="webcam-img" width={500} height={200} />
      ) : (
-       <Webcam height={500} width={500} ref={webcamRef} screenshotFormat={"image/png"} screenshotQuality={1}/>
+       <Webcam height={500} width={500} videoConstraints={videoConstraints} ref={webcamRef} screenshotFormat={"image/jpg"} screenshotQuality={1}/>
      )}
      <div className="mt">
        {imgData ? (
